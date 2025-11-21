@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Sales-{YYYY}-{###}",
+ "creation": "2025-10-17 11:11:00.815652",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "workflow_state",
+  "section_break_wt80",
+  "customer_name",
+  "column_break_zcew",
+  "date",
+  "section_break_upsq",
+  "items",
+  "total_amount",
+  "tax_calculation_section",
+  "tax",
+  "column_break_lnht",
+  "tax_amount",
+  "amount_to_pay_section",
+  "net_total",
+  "column_break_mmeu",
+  "outstanding_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_wt80",
+   "fieldtype": "Section Break",
+   "label": "Order"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Link",
+   "label": "Customer Name",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Total Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tax",
+   "fieldtype": "Percent",
+   "label": "Tax",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "net_total",
+   "fieldtype": "Currency",
+   "label": "Net Total",
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Items"
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "label": "Tax Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Workflow State",
+   "no_copy": 1,
+   "options": "Workflow State"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "outstanding_amount",
+   "fieldtype": "Currency",
+   "label": "Outstanding Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zcew",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_upsq",
+   "fieldtype": "Section Break",
+   "label": "Select items"
+  },
+  {
+   "fieldname": "tax_calculation_section",
+   "fieldtype": "Section Break",
+   "label": "Tax Calculation"
+  },
+  {
+   "fieldname": "column_break_lnht",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount_to_pay_section",
+   "fieldtype": "Section Break",
+   "label": "Amount To Pay"
+  },
+  {
+   "fieldname": "column_break_mmeu",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-11-04 11:42:35.795003",
+ "modified_by": "Administrator",
+ "module": "Salesorder",
+ "name": "Salesorder",
+ "naming_rule": "Expression",
+ "nsm_parent_field": "parent_salesorder",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

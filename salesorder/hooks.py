@@ -245,3 +245,10 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+scheduler_events = {
+    "cron": {
+       "25 12 * * *": [
+            "salesorder.salesorder.doctype.salesorder.salesorder.daily_sales_order_summary"
+        ]
+    }
+}
