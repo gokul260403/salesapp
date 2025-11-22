@@ -252,3 +252,6 @@ scheduler_events = {
         ]
     }
 }
+
+
+fixtures=["Customer","Item List","Items","Payment","Salesorder","Print Format","Client Script","Server Script"]

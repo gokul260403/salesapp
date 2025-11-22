@@ -1,0 +1,34 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Item List",
+  "item_name": "watch",
+  "modified": "2025-11-04 17:53:51.459114",
+  "name": "watch",
+  "rate": 1000.0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Item List",
+  "item_name": "belt",
+  "modified": "2025-11-04 17:56:51.216866",
+  "name": "belt",
+  "rate": 500.0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Item List",
+  "item_name": "Mobile",
+  "modified": "2025-11-04 17:59:00.506707",
+  "name": "Mobile",
+  "rate": 32000.0
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Item List",
+  "item_name": "Laptop",
+  "modified": "2025-11-04 17:58:33.813773",
+  "name": "Laptop",
+  "rate": 52000.0
+ }
+]

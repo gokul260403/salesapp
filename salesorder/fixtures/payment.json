@@ -1,0 +1,98 @@
+[
+ {
+  "amended_from": null,
+  "docstatus": 0,
+  "doctype": "Payment",
+  "modified": "2025-10-24 12:29:50.551196",
+  "name": "payment-2025-007",
+  "outstanding_amount": 31500.0,
+  "payable_amount": 100.0,
+  "payment_date": "2025-10-24",
+  "sales_order": "Sales-2025-006",
+  "workflow_state": "Payment pending"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 0,
+  "doctype": "Payment",
+  "modified": "2025-10-24 12:54:46.397622",
+  "name": "payment-2025-010",
+  "outstanding_amount": 50000.0,
+  "payable_amount": 1000.0,
+  "payment_date": "2025-10-24",
+  "sales_order": "Sales-2025-009",
+  "workflow_state": "Payment pending"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 2,
+  "doctype": "Payment",
+  "modified": "2025-10-24 13:13:34.853051",
+  "name": "payment-2025-011",
+  "outstanding_amount": 50000.0,
+  "payable_amount": 1000.0,
+  "payment_date": "2025-10-24",
+  "sales_order": "Sales-2025-009",
+  "workflow_state": "Cancelled"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Payment",
+  "modified": "2025-10-24 13:05:37.874584",
+  "name": "payment-2025-012",
+  "outstanding_amount": 20000.0,
+  "payable_amount": 30000.0,
+  "payment_date": "2025-10-24",
+  "sales_order": "Sales-2025-009",
+  "workflow_state": "Payment Accepted"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 0,
+  "doctype": "Payment",
+  "modified": "2025-10-24 13:13:18.595512",
+  "name": "payment-2025-013",
+  "outstanding_amount": -20000.0,
+  "payable_amount": 20000.0,
+  "payment_date": null,
+  "sales_order": "Sales-2025-009",
+  "workflow_state": "Payment rejected"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 0,
+  "doctype": "Payment",
+  "modified": "2025-11-04 15:16:27.740999",
+  "name": "payment-2025-018",
+  "outstanding_amount": 31500.0,
+  "payable_amount": 1500.0,
+  "payment_date": null,
+  "sales_order": "Sales-2025-006",
+  "workflow_state": "Payment pending"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 0,
+  "doctype": "Payment",
+  "modified": "2025-11-04 15:25:02.609122",
+  "name": "payment-2025-019",
+  "outstanding_amount": 0.1,
+  "payable_amount": 29998.0,
+  "payment_date": null,
+  "sales_order": "Sales-2025-006",
+  "workflow_state": "Payment pending"
+ },
+ {
+  "amended_from": null,
+  "docstatus": 1,
+  "doctype": "Payment",
+  "modified": "2025-11-04 15:33:44.545959",
+  "name": "payment-2025-020",
+  "outstanding_amount": 0.0,
+  "payable_amount": 10.0,
+  "payment_date": "2025-11-04",
+  "sales_order": "Sales-2025-006",
+  "workflow_state": "Payment Accepted"
+ }
+]

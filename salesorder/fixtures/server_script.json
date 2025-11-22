@@ -1,0 +1,40 @@
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Save",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2025-11-04 15:47:36.077960",
+  "module": null,
+  "name": "Payment Calulation",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Payment",
+  "script": "doc.outstanding_amount=doc.outstanding_amount-doc.payable_amount\r\namount=frappe.get_doc('Salesorder',doc.sales_order)\r\namount.outstanding_amount=doc.outstanding_amount\r\namount.save()",
+  "script_type": "DocType Event"
+ },
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Save",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2025-11-04 17:55:59.406595",
+  "module": null,
+  "name": "ItemList Script",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Item List",
+  "script": "# Item=frappe.get_doc(\"Items\",doc.item_name)\n# Item.rate=doc.rate\n# Item.save()\n\n# frappe.db.set_value('Items',doc.name,\"rate\",doc.rate)\n# frappe.db.set_value('Items',\"Mobile\",\"rate\",\"10\")\n# frappe.msgprint(\"hii\")\n\n\n\nfrappe.db.set_value(\"Items\", {\"item\": doc.item_name}, \"rate\", doc.rate)\n\n\n",
+  "script_type": "DocType Event"
+ }
+]

@@ -1,0 +1,24 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Salesorder",
+  "enabled": 1,
+  "modified": "2025-11-04 15:30:26.494546",
+  "module": null,
+  "name": "Payment Btn in Sales",
+  "script": "\r\nfrappe.ui.form.on(\"Salesorder\", {\r\n    refresh:function(frm){\r\n        if(frm.doc.outstanding_amount>0){\r\n            frm.add_custom_button(\"Make Payment\",function(){\r\n                frappe.new_doc('Payment',{\r\n                    sales_order:frm.doc.name,\r\n                    payment_date:frappe.datetime.get_today(),\r\n                    outstanding_amount:frm.doc.outstanding_amount,\r\n                },\r\n                    \r\n                )\r\n            })\r\n        }\r\n     if (!frm.doc.date) {\r\n            frm.set_value(\"date\", frappe.datetime.get_today());\r\n        }\r\n\r\n    }\r\n});\r\n",
+  "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Salesorder",
+  "enabled": 1,
+  "modified": "2025-11-04 14:48:36.918092",
+  "module": "Salesorder",
+  "name": "Sales List",
+  "script": " frappe.listview_settings['Salesorder'] = {\r\n    onload(listview) {\r\n        listview.page.add_inner_button(\"Demo Btn\", function() {\r\n            frappe.msgprint(\"Button in list view!\");\r\n        });\r\n         frappe.msgprint(\"Sales Order onload\");\r\n    }\r\n};\r\n \r\n// frappe.listview_settings['Salesorder'] = {\r\n//     onload(listview) {\r\n//       listview.page.icon.hide()\r\n//     }\r\n// };\r\n",
+  "view": "List"
+ }
+]
