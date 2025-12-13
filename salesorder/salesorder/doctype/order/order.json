@@ -1,38 +1,34 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Sales-{YYYY}-{###}",
- "creation": "2025-10-17 11:11:00.815652",
- "default_view": "List",
+ "autoname": "format:{customer_name}-{###}-{YYYY}",
+ "creation": "2025-11-26 18:42:29.107245",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "workflow_state",
-  "section_break_wt80",
+  "section_break_8b4u",
+  "amended_from",
   "customer_name",
-  "column_break_zcew",
+  "column_break_rzyv",
   "date",
-  "section_break_upsq",
+  "section_break_wuyn",
   "items",
   "total_amount",
-  "tax_calculation_section",
+  "section_break_lnxe",
   "tax",
-  "column_break_lnht",
+  "column_break_vpak",
   "tax_amount",
-  "amount_to_pay_section",
+  "section_break_qfir",
   "net_total",
-  "column_break_mmeu",
-  "outstanding_amount"
+  "column_break_gjiv",
+  "outstanding_amount",
+  "payment_status"
  ],
  "fields": [
   {
-   "fieldname": "section_break_wt80",
-   "fieldtype": "Section Break",
-   "label": "Order"
-  },
-  {
    "fieldname": "customer_name",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Customer Name",
    "options": "Customer",
    "reqd": 1
@@ -47,8 +43,7 @@
   {
    "fieldname": "tax",
    "fieldtype": "Percent",
-   "label": "Tax",
-   "non_negative": 1
+   "label": "Tax"
   },
   {
    "fieldname": "net_total",
@@ -75,62 +70,91 @@
   },
   {
    "allow_on_submit": 1,
-   "fieldname": "workflow_state",
-   "fieldtype": "Link",
-   "hidden": 1,
-   "label": "Workflow State",
-   "no_copy": 1,
-   "options": "Workflow State"
-  },
-  {
-   "allow_on_submit": 1,
    "fieldname": "outstanding_amount",
    "fieldtype": "Currency",
    "label": "Outstanding Amount",
    "read_only": 1
   },
   {
-   "fieldname": "column_break_zcew",
+   "fieldname": "section_break_8b4u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_rzyv",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "section_break_upsq",
+   "collapsible": 1,
+   "fieldname": "section_break_wuyn",
    "fieldtype": "Section Break",
-   "label": "Select items"
+   "label": "Select Items"
   },
   {
-   "fieldname": "tax_calculation_section",
+   "collapsible": 1,
+   "fieldname": "section_break_lnxe",
    "fieldtype": "Section Break",
    "label": "Tax Calculation"
   },
   {
-   "fieldname": "column_break_lnht",
+   "fieldname": "column_break_vpak",
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "amount_to_pay_section",
+   "collapsible": 1,
+   "fieldname": "section_break_qfir",
    "fieldtype": "Section Break",
-   "label": "Amount To Pay"
+   "label": "Amount to pay"
   },
   {
-   "fieldname": "column_break_mmeu",
+   "fieldname": "column_break_gjiv",
    "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "payment_status",
+   "fieldtype": "Select",
+   "label": "Payment Status",
+   "options": "Pending\nCompleted"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2025-11-04 11:42:35.795003",
+ "modified": "2025-12-01 19:17:41.997514",
  "modified_by": "Administrator",
  "module": "Salesorder",
- "name": "Salesorder",
+ "name": "Order",
  "naming_rule": "Expression",
- "nsm_parent_field": "parent_salesorder",
  "owner": "Administrator",
- "permissions": [],
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
- "sort_field": "creation",
+ "sort_field": "modified",
  "sort_order": "DESC",
  "states": []
 }

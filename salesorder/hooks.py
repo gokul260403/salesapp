@@ -248,10 +248,17 @@ app_license = "mit"
 scheduler_events = {
     "cron": {
        "25 12 * * *": [
-            "salesorder.salesorder.doctype.salesorder.salesorder.daily_sales_order_summary"
+            "order.order.doctype.order.order.daily_sales_order_summary"
         ]
     }
 }
 
 
-fixtures=["Customer","Item List","Items","Payment","Salesorder","Print Format","Client Script","Server Script"]
+fixtures=["Customer","Item List","Items","Payment Entry","Order","Print Format","Client Script","Server Script"]
+
+doc_events={
+    "Salesorder":{
+        "on_submit":"salesorder.salesorder.API.sales_chart_api.push_sales_amount"
+        
+    }
+}

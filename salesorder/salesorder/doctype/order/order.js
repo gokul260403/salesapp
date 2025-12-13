@@ -10,11 +10,11 @@ frappe.ui.form.on("Items", {
         Price(frm,cdt,cdn);     
     },
     items_add: function(frm, cdt, cdn) {
-        let row = locals[cdt][cdn];
-        row.item = "Bat";
-        row.rate = 100;
-        row.quantity = 1;
-        frm.refresh_field("items");
+        // let row = locals[cdt][cdn];
+        // row.item = "Bat";
+        // row.rate = 100;
+        // row.quantity = 1;
+        // frm.refresh_field("items");
         frappe.msgprint('A row has been added to the items table');
     },
     items_remove(frm,cdt,cdn){
@@ -43,7 +43,7 @@ function Price(frm,cdt,cdn){
 
 }
 
-frappe.ui.form.on("Salesorder", {
+frappe.ui.form.on("Order", {
     tax: function(frm){
         Tax(frm)
     },
@@ -53,8 +53,8 @@ frappe.ui.form.on("Salesorder", {
     // refresh:function(frm){
     //     if(frm.doc.outstanding_amount!=0){
     //         frm.add_custom_button("Make Payment",function(){
-    //             frappe.new_doc('Payment',{
-    //                 sales_order:frm.doc.name,
+    //             frappe.new_doc('Payment Entry',{
+    //                 order:frm.doc.name,
     //                 payment_date:frappe.datetime.get_today(),
     //                 outstanding_amount:frm.doc.outstanding_amount,
     //             },
@@ -67,14 +67,19 @@ frappe.ui.form.on("Salesorder", {
 });
 
 function Tax(frm){
-    let tax= frm.doc.tax;
-        let tax_amount=(frm.doc.total_amount)*(tax/100);
-        frm.set_value("tax_amount",tax_amount)
-        frm.refresh_field("tax_amount");
+    let tax_amount=0;
+    if(frm.doc.tax){
+        let tax= frm.doc.tax ;
+        tax_amount=(frm.doc.total_amount)*(tax/100);
+       
+    }
+    frm.set_value("tax_amount",tax_amount)
+    frm.refresh_field("tax_amount");
+     
 
-        let net_total=frm.doc.total_amount + tax_amount
-        frm.set_value("net_total",net_total)
-        frm.set_value("outstanding_amount",net_total)
-        frm.refresh_field("net_total");
+    let net_total=frm.doc.total_amount + tax_amount
+    frm.set_value("net_total",net_total)
+    frm.set_value("outstanding_amount",net_total)
+    frm.refresh_field("net_total");
 }
 

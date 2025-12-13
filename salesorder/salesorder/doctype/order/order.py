@@ -6,7 +6,7 @@ from frappe.model.document import Document
 # from frappe.utils import today
 from frappe.utils import nowdate, formatdate
 
-class Salesorder(Document):
+class Order(Document):
 	def before_save(self):
 		# self.date=today()
 		self.date=nowdate()
@@ -16,7 +16,7 @@ def daily_sales_order_summary():
 	today = nowdate()
 
 	total_orders = frappe.db.count(
-		"Salesorder",
+		"Order",
 		filters={"date": today}
 	)
 	message = f" Total Sales Orders created on {formatdate(today)}: {total_orders}"

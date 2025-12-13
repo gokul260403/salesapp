@@ -1,0 +1,19 @@
+{
+ "content": null,
+ "creation": "2025-12-08 17:28:22.215446",
+ "docstatus": 0,
+ "doctype": "Page",
+ "idx": 0,
+ "modified": "2025-12-08 17:28:22.215446",
+ "modified_by": "Administrator",
+ "module": "Salesorder",
+ "name": "sales-chart",
+ "owner": "Administrator",
+ "page_name": "sales-chart",
+ "roles": [],
+ "script": null,
+ "standard": "Yes",
+ "style": null,
+ "system_page": 0,
+ "title": "Grand Total"
+}
